@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>classList</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+
+            // 得到所属class的列表
+
+            //alert( oDiv.classList );  // 类数组的对象 box1 bxo2 box3
+
+            //alert( oDiv.classList.length );  //3
+
+            //oDiv.classList.add('box4');
+
+            //oDiv.classList.remove('box2');
+
+            oDiv.classList.toggle('box2');
+
+        };
+    </script>
+</head>
+<body>
+<div id="div1" class="box1 box2 box3">div</div>
+</body>
+</html>
