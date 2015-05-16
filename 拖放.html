@@ -30,7 +30,7 @@
 
                     var ev = ev || window.event;
                     // 兼容ff
-                    ev.dataTransfer.setData('name',this.index);
+                    ev.dataTransfer.setData('name',this.index); // 设置数据
 
                     this.style.background='green';
                 };
@@ -67,8 +67,8 @@
 
             // 在目标元素上释放鼠标触发
             oDiv.ondrop = function(ev){
-
-                //alert( ev.dataTransfer.getData('name') );
+                // 获取数据
+                // alert( ev.dataTransfer.getData('name') );
 
                 oUl.removeChild( aLi[ev.dataTransfer.getData('name')] );
 
