@@ -9,15 +9,19 @@
 
             // 得到所属class的列表
 
-            //alert( oDiv.classList );  // 类数组的对象 box1 bxo2 box3
+            alert( oDiv.classList );  // 类数组的对象 box1 bxo2 box3
 
-            //alert( oDiv.classList.length );  //3
+            alert( oDiv.classList.length );  //3
 
-            //oDiv.classList.add('box4');
+            // 如果存在添加的class,则不会重复添加
+            oDiv.classList.add('box4');
 
-            //oDiv.classList.remove('box2');
+            // 如果删除没有的class 则不会报错
+            oDiv.classList.remove('box2');
 
-            oDiv.classList.toggle('box2');
+            // toggle class如果在原有的列表中出现,就删除该class
+            // 如果没有出现就添加
+             oDiv.classList.toggle('box2');
 
         };
     </script>
