@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>媒体元素</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oA = document.getElementById('a1');
+
+            /*setInterval(function(){
+
+             console.log(oA.currentTime); // 实时播放所用的时间
+
+             },1000);*/
+
+            // oA.currentTime = 60;  60秒 设置1分钟的时候开始播放
+
+            console.log(oA.duration);  // 媒体总时间 (只读)
+            console.log(oA.volume);  // 0.0-1.0 的音量相对值
+
+            console.log(oA.muted); // 是否静音 false
+
+            // oA.autobuffer  开始的时候是否缓冲加载,autoplay时候,忽略此属性
+
+            console.log(oA.paused);  // 是否暂停 (只读)
+            console.log(oA.ended); // 是否播放结束 (只读)
+            console.log(oA.error); // 提示错误
+            console.log(oA.currentSrc); // 当前播放的地址
+
+        };
+
+    </script>
+</head>
+<body>
+<!-- controls显示或隐藏用户界面  autoplay是否自动播放 loop 是否循环播放 -->
+<audio id="a1" controls autoplay src=""></audio>
+</body>
+</html>

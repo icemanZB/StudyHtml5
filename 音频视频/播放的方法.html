@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>播放的方法</title>
+    <script type="text/javascript">
+        window.onload = function(){
+
+            var oV = document.getElementById('v1');
+            var oInput = document.getElementById('input1');
+            var aS = document.getElementsByTagName('source');
+
+            oV.onmouseover = function(){
+                this.play();  // 播放
+            };
+
+            oV.onmouseout = function(){
+                this.pause();  // 暂停
+            };
+
+            oInput.onclick = function(){
+
+                aS[0].src = 'xxxx.mp4';
+                aS[1].src = 'yyyy.mp4';
+
+                oV.load();  // 重新加载媒体
+
+            };
+
+        };
+
+    </script>
+</head>
+<body>
+<input type="button" value="重新加载" id="input1"/>
+<video id="v1">
+    <source src=""></source>
+    <source src=""></source>
+</video>
+</body>
+</html>

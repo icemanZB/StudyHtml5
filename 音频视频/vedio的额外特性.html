@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>vedio的额外特性</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var oV = document.getElementById('v1');
+
+            oV.poster = '2.png';  // 视频播放前的预览图片
+
+            // 设置视频的尺寸
+            oV.width = 500;
+            oV.height = 500;
+
+            alert(oV.videoWidth);  // 视频的实际尺寸  (只读)
+
+            oV.addEventListener('ended', function () {
+
+                alert(123);
+
+            }, false);
+
+
+        };
+    </script>
+</head>
+<body>
+<video controls id="v1">
+
+    <source src=""></source>
+    <source src=""></source>
+
+</video>
+</body>
+</html>
